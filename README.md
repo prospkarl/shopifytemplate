@@ -28,15 +28,20 @@ The website must look like this:
 Make sure you've installed "Theme Kit". Install theme kit here: https://shopify.github.io/themekit/
 
 ##### 1. Create a blank folder and create a file named as "config.yml"
-![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/createconfig.png?raw=true)
+![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/createconfig.PNG?raw=true)
 
 ##### 2. Edit file using "Notepad" and copy paste the code below:
 
 ```
 development:
-  password: [ADMIN API > PASSWORD]
-  theme_id: [Click themes > Actions > Edit Code > Get the last key of the url /admin/themes/0128042 <--]
+  password: [Sending Feedback](#admin-api)
+  theme_id: [Sending Feedback](#theme-id)
   store: [samplewebsite.myshopify.com]
 ```
 
-**Note:** _To get these credentials go to your account and get to Sidebar > Apps. And click "Manage private apps". Create an app, and get credentials from there._
+##### ADMIN API
+To get these credentials go to your account and get to Sidebar > Apps. And click "Manage private apps". Create an app, and get credentials from there.
+
+##### THEME ID
+Click themes > Actions > Edit Code > Get the last key of the url /admin/themes/0128042
+![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/theme_id.png?raw=true)
