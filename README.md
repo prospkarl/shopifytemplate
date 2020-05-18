@@ -8,16 +8,16 @@ This is a guide for Shopify Conversion
 
 ## Uploading Template Files
 
-### 1. Go to "Themes" page on your shopify website
+### 1. GO TO "THEMES" PAGE ON YOUR SHOPIFY WEBSITE
 ![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/themes_page.png?raw=true)
 
-### 2. Scroll down and Click "Upload Theme" button
+### 2. SCROLL DOWN AND CLICK "UPLOAD THEME" BUTTON
 ![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/upload_btn.png?raw=true)
 
-### 3. Upload the template files (.zip file from our /template folder)
+### 3. UPLOAD THE TEMPLATE FILES (.ZIP FILE FROM OUR /TEMPLATE FOLDER)
 ![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/upload_template.png?raw=true)
 
-### 4. Preview Website
+### 4. PREVIEW WEBSITE
 Click on the "Eye" icon from the sidebar.
 
 _The website must look like this:_
@@ -34,10 +34,10 @@ theme deploy - upload changes from local
 theme watch - listen for file changes
 ```
 
-### 1. Create a blank folder and create a file named as "config.yml"
+### 1. CREATE A BLANK FOLDER AND CREATE A FILE NAMED AS "CONFIG.YML"
 ![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/createconfig.PNG?raw=true)
 
-### 2. Edit file using "Notepad" and copy paste the code below:
+### 2. EDIT FILE USING "NOTEPAD" AND COPY PASTE THE CODE BELOW:
 
 ```
 development:
@@ -54,14 +54,14 @@ To get these credentials go to your account and get to Sidebar > Apps. And click
 Click themes > Actions > Edit Code > Get the last key of the url /admin/themes/0128042
 ![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/theme_id.png?raw=true)
 
-##### _'config.yml'_ must look like this
+##### _'CONFIG.YML'_ MUST LOOK LIKE THIS
 ![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/configuration.png?raw=true)
 
-### 4. Open git bash on the same folder.
+### 4. OPEN GIT BASH ON THE SAME FOLDER.
 ![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/gitbash.png?raw=true)
 
-### 5. Run "theme download".
+### 5. RUN "THEME DOWNLOAD".
 ![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/themedownload.png?raw=true)
 
-### 5. To listen to changes, run "theme watch".
+### 5. TO LISTEN TO CHANGES, RUN "THEME WATCH".
 ![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/themewatch.png?raw=true)
