@@ -8,16 +8,16 @@ This is a guide for Shopify Conversion
 
 ## Uploading Template Files
 
-##### 1. Go to "Themes" page on your shopify website
+#### 1. Go to "Themes" page on your shopify website
 ![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/themes_page.png?raw=true)
 
-##### 2. Scroll down and Click "Upload Theme" button
+#### 2. Scroll down and Click "Upload Theme" button
 ![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/upload_btn.png?raw=true)
 
-##### 3. Upload the template files (.zip file from our /template folder)
+#### 3. Upload the template files (.zip file from our /template folder)
 ![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/upload_template.png?raw=true)
 
-##### 4. Preview Website
+#### 4. Preview Website
 Click on the "Eye" icon from the sidebar.
 
 The website must look like this:
@@ -27,21 +27,25 @@ The website must look like this:
 
 Make sure you've installed "Theme Kit". Install theme kit here: https://shopify.github.io/themekit/
 
-##### 1. Create a blank folder and create a file named as "config.yml"
+#### 1. Create a blank folder and create a file named as "config.yml"
 ![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/createconfig.PNG?raw=true)
 
-##### 2. Edit file using "Notepad" and copy paste the code below:
+#### 2. Edit file using "Notepad" and copy paste the code below:
 
 ```
 development:
-  password: [Sending Feedback](#admin-api)
-  theme_id: [Sending Feedback](#theme-id)
+  password: [ADMIN API]
+  theme_id: [THEME ID ]
   store: [samplewebsite.myshopify.com]
 ```
 
 ##### ADMIN API
 To get these credentials go to your account and get to Sidebar > Apps. And click "Manage private apps". Create an app, and get credentials from there.
+![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/adminapi.png?raw=true)
 
 ##### THEME ID
 Click themes > Actions > Edit Code > Get the last key of the url /admin/themes/0128042
 ![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/theme_id.png?raw=true)
+
+_'config.yml'_ must look like this:
+![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/configuration.png?raw=true)
