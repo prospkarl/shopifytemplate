@@ -20,14 +20,14 @@ This is a guide for Shopify Conversion
 ### 4. Preview Website
 Click on the "Eye" icon from the sidebar.
 
-The website must look like this:
+_The website must look like this:_
 ![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/done_upload.png?raw=true)
 
 ## Edit Template files
 
 Make sure you've installed "Theme Kit". Install theme kit here: https://shopify.github.io/themekit/
 
-** Important Theme Kit Actions**
+**Important Theme Kit Actions**
 ```
 theme download - download current website files
 theme deploy - upload changes from local
@@ -47,12 +47,21 @@ development:
 ```
 
 #### ADMIN API
-To get these credentials go to your account and get to Sidebar > Apps. And click "Manage private apps". Create an app, and get credentials from there.
+To get these credentials go to your account and get to Sidebar > Apps. And click "Manage private apps". Create an app, set the permission of "Theme Templates and theme assets" from "No access" => "Read and write". Get the API from there.
 ![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/adminapi.png?raw=true)
 
 #### THEME ID
 Click themes > Actions > Edit Code > Get the last key of the url /admin/themes/0128042
 ![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/theme_id.png?raw=true)
 
-_'config.yml'_ must look like this:
+##### _'config.yml'_ must look like this
 ![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/configuration.png?raw=true)
+
+### 4. Open git bash on the same folder.
+![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/gitbash.png?raw=true)
+
+### 5. Run "theme download".
+![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/themedownload.png?raw=true)
+
+### 5. To listen to changes, run "theme watch".
+![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/themewatch.png?raw=true)
