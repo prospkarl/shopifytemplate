@@ -2,12 +2,23 @@
 This is a guide for Shopify Conversion
 
 ## Table of Contents
-
+==============
+- [Template Components](#edit-template-files)
 - [Uploading Template Files](#uploading-template-files)
 - [Edit Template](#edit-template-files)
 
-## Uploading Template Files
+## Template Components
+==============
+- header.liquid
+- banner.liquid
+- middle.liquid
+- footer.liquid
+![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/sections.png?raw=true)
 
+**Note** _Check "theme.liquid" for the page layout_
+
+## Uploading Template Files
+==============
 ### 1. GO TO "THEMES" PAGE ON YOUR SHOPIFY WEBSITE
 ![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/themes_page.png?raw=true)
 
@@ -24,7 +35,7 @@ _The website must look like this:_
 ![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/done_upload.png?raw=true)
 
 ## Edit Template files
-
+==============
 Make sure you've installed "Theme Kit". Install theme kit here: https://shopify.github.io/themekit/
 
 **Important Theme Kit Actions**
@@ -61,7 +72,9 @@ Click themes > Actions > Edit Code > Get the last key of the url /admin/themes/0
 ![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/gitbash.png?raw=true)
 
 ### 5. RUN "THEME DOWNLOAD".
+_this will download all theme files from your website_
 ![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/themedownload.png?raw=true)
 
 ### 5. TO LISTEN TO CHANGES, RUN "THEME WATCH".
+_changes will be automatically saved after running this command_
 ![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/themewatch.png?raw=true)
