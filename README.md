@@ -2,13 +2,13 @@
 This is a guide for Shopify Conversion
 
 ## Table of Contents
-==============
+
 - [Template Components](#edit-template-files)
 - [Uploading Template Files](#uploading-template-files)
 - [Edit Template](#edit-template-files)
 
 ## Template Components
-==============
+
 - header.liquid
 - banner.liquid
 - middle.liquid
@@ -19,7 +19,7 @@ This is a guide for Shopify Conversion
 **Note** _Check "theme.liquid" for the page layout_
 
 ## Uploading Template Files
-==============
+
 ### 1. GO TO "THEMES" PAGE ON YOUR SHOPIFY WEBSITE
 ![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/themes_page.png?raw=true)
 
@@ -36,7 +36,7 @@ _The website must look like this:_
 ![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/done_upload.png?raw=true)
 
 ## Edit Template files
-==============
+
 Make sure you've installed "Theme Kit". Install theme kit here: https://shopify.github.io/themekit/
 
 **Important Theme Kit Actions**
