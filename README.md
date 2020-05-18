@@ -3,7 +3,7 @@ This is a guide for Shopify Conversion. For more Shopify Developer docs please v
 
 ## Table of Contents
 
-- [Template Components](#edit-template-files)
+- [Template Components](#template-components)
 - [Uploading Template Files](#uploading-template-files)
 - [Edit Template](#edit-template-files)
 
