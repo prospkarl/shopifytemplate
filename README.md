@@ -4,7 +4,7 @@ This is a guide for Shopify Conversion
 ## Table of Contents
 
 - [Uploading Template Files](#uploading-template-files)
-- [Edit Template files](#edit-template-files)
+- [Sending Feedback](#edit-template-files)
 
 ## Uploading Template Files
 
