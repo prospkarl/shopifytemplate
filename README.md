@@ -1,5 +1,5 @@
-# Shopify Guide
-This is a guide for Shopify Conversion
+# Shopify Conversion Guide
+This is a guide for Shopify Conversion. For more Shopify Developer docs please visit: https://shopify.dev/concepts/shopify-introduction
 
 ## Table of Contents
 
@@ -12,6 +12,7 @@ This is a guide for Shopify Conversion
 - header.liquid
 - banner.liquid
 - middle.liquid
+- bottom.liquid
 - footer.liquid
 
 ![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/sections.png?raw=true)
