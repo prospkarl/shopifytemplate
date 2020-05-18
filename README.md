@@ -1,6 +1,10 @@
 # Shopify Guide
 This is a guide for Shopify Conversion
 
+## Table of Contents
+
+- [Uploading Template Files](#uploading-template-files)
+- [Sending Feedback](#edit-template-files)
 
 ## Uploading Template Files
 
@@ -18,3 +22,7 @@ Click on the "Eye" icon from the sidebar.
 
 The website must look like this:
 ![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/done_upload.png?raw=true)
+
+## Edit Template files
+
+###
