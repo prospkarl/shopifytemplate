@@ -1,0 +1,89 @@
+<div class="single-product-details">
+    <div class="left-container">
+        
+        <!-- {{image | img_url:'large'}} -->
+        <div class="product-images">
+            {% if product.images.size > 0 %}
+            
+                {% for image in product.images %}
+
+                <div>
+                    <img src="{{image | img_url: 'large'}}" alt="{{image.title}}">
+                </div>
+
+                {% endfor %}
+
+            {% else %}
+
+                <img src="{{image| img_url:'large'}}" alt="">
+
+            {% endif %}        
+        </div>
+        <div class="product-images-nav">
+            {% for image in product.images %}
+            <div>
+                <img src="{{image | img_url: 'medium'}}" alt="{{image.title}}">
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="right-container">
+        <h1 class="product-name">{{product.title}}</h1>
+       
+        <div class="price-info">
+            {% if product.price_min == product.price_max %}
+                <span class="product-price primary-txt">{{product.price | money}}</span>
+                <span class="compare-price">{{product.compare_at_price | money}}</span>
+            {% else %}
+                <span class="product-price primary-txt">{{product.price_min | money}} - {{product.price_max | money}}</span>                
+            {% endif %}
+
+        </div>
+
+
+        {% if product.available %}
+                {% form "product", product %}
+
+                    <div class="product-qty-container">
+                        <input type="number" name="quantity" class="product-qty" value="1" min="1" />
+                    </div>
+
+                    {% if product.variants[1].id %}
+
+                    <div class="product-variants">
+                        
+                    {% else %}
+                        
+                    <div class="product-variants hidden">
+
+                    {% endif %}
+
+                        <label>Select Option</label>
+
+                            <select name="id">    
+                                {% for variant in product.variants %}
+                                <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %}
+                                    value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
+                                {% endfor %}
+                            </select>
+                    </div>
+
+
+                    <input class="add-to-cart-btn primary-bg" type="submit" value="Add to cart" />
+                {% endform %}
+
+                    <div class="product-description">
+                        {{ product.content }}
+                    </div>
+
+
+            {% else %}
+
+                <p class="comingsoon-text">Product is unavailable</p>
+
+            {% endif %}
+    </div>
+
+</div>
+
+{% section 'product-recommendations' %}

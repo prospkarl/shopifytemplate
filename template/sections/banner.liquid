@@ -1,0 +1,34 @@
+<div style="background-color: white; text-align: center;">
+    <h1 style="
+        border-top: 2px solid;
+        font-size: 3em;
+        line-height: 2;
+    ">Sample Banner Content</h1>
+    <h1 style="
+     font-size: 1.5em;
+     line-height: 1;
+     ">Edit /themes/header.liquid</h1><br>
+</div>
+
+<!-- if page is current homepage / index  -->
+{% if template != 'product' %}
+
+    {% if template == 'index' %}
+
+        <img src="{{'1.jpg' | asset_url}}" alt="BANNER IMAGE">
+
+    {% else %}
+
+        <img src="{{'2.jpg' | asset_url}}" alt="BANNER IMAGE">
+
+    {% endif %}
+    
+{% endif %}
+
+<h1 style="
+    text-align: center;
+    border-bottom: 2px solid;
+    font-size: 3em;
+    line-height: 2;
+    background: white;
+">{{page_title }}</h1>

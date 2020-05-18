@@ -1,0 +1,9 @@
+<div class="product-card">
+    <a href="{{product.url}}" class="product-card-img">
+        <img src="{{product.featured_image | img_url: 'large'}}" alt="">
+        
+    </a>
+    <h3 class="product-card-title">{{product.title}}</h3>
+
+    <span>{{product.price_max | money}}</span>
+</div>

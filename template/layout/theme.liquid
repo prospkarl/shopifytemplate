@@ -1,0 +1,81 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	{% if template == 'index' %}
+	<title>{{ shop.name }} | {{ page_title }}</title>
+	{% elsif template == '404' %}
+	<title>Page Not Found | {{ shop.name }}</title>
+	{% else %}
+	<title>{{ page_title }} | {{ shop.name }}</title>
+	{% endif %}
+
+	{% if page_description %}
+	<meta name="description" content="{{ page_description }}" />
+	{% endif %}
+
+	{{ content_for_header }}
+
+	<link rel="canonical" href="{{ canonical_url }}" />
+	<meta name="viewport" content="width=device-width" />
+
+	<!-- Enqueue Stylesheets here -->
+	{{ 'style.scss' | asset_url | stylesheet_tag }}
+	{{ 'my-style.scss' | asset_url | stylesheet_tag }}
+	{{ 'my-media.css' | asset_url | stylesheet_tag }}
+	
+	<!-- Slick for product display -->
+	{{ 'slick.css' | asset_url | stylesheet_tag }}
+	{{ 'slick-theme.css' | asset_url | stylesheet_tag }}
+
+	<!-- SAMPLE: {{ 'stylesheet.css' | asset_url | stylesheet_tag }} -->
+
+	<link rel="icon" type="image/ico" href="{{ 'icon_name.png' | | asset_url }}" />
+</head>
+
+<body>
+	<!-- Header -->
+	{% section 'header' %}
+
+	<!-- Banner -->
+	{% section 'banner' %}
+
+	<div class="protect-me">
+		<div class="clearfix">
+
+			{% if template == 'index' %}
+			{{ content_for_layout }}
+			{{page.content}}
+			{% else %}
+			<div class="wrapper">
+				{% render 'breadcrumbs' %}
+				{{ content_for_layout }}
+				{{page.content}}
+			</div>
+			{% endif %}
+
+			<!-- Footer -->
+			{% section 'footer' %}
+		</div>
+	</div>
+
+	<!-- Enqueue Scripts here -->
+	<!-- SAMPLE: {{ 'javascript_filename.js' | asset_url | script_tag}} -->
+	{{ 'jquery-2.1.1.min.js' | asset_url | script_tag}}
+	
+	<!-- Slick JS for Product images display -->
+	{{ 'slick.min.js' | asset_url | script_tag}}
+
+	{{ 'my-scripts.js' | asset_url | script_tag}}
+</body>
+
+</html>

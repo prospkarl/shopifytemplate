@@ -1,0 +1,1 @@
+ALL ASSETS CSS/JS/IMAGES must be here, creating folders is not allowed.

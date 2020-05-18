@@ -1,0 +1,59 @@
+<div id="searchresults">  
+  
+	
+	{% if search.performed %}
+    
+    {% paginate search.results by 10 %}  
+	
+    {% if search.results == empty %}  
+		<h1>No results for "{{search.terms | escape}}"</h1>              
+    {% else %}  
+		<h1>Search results for: <strong>{{search.terms  | escape}}</strong></h1>
+	
+        <div class="products-list">
+          {% for product in search.results %}      
+          <div class="product">
+				<a href="{{product.url}}">
+					<img src="{{ product | img_url: 'large' }}" alt="{{product.title}}">
+				</a>
+				<div class="product-details">
+					<h1>{{product.title}}</h1>
+
+					{% assign count = 0 %}
+
+					{% for collection in product.collections %}
+					{% if count == 0 %}
+					<a href={{collection.url}} style="color:black">{{ collection.title }} </a>
+					{% assign count = 1 %}
+					{% endif %}
+					{% endfor %}
+
+					<span>{{product.price | money}}</span>
+					</select>
+
+					{% if product.available %}
+						{% if product.has_only_default_variant %}
+							<button class="add-to-cart primary-bg" data-variant="{{ product.first_available_variant.id }}">Add to Cart</button>
+						{% else %}
+							<button class="primary-bg" onclick="window.location.href='{{product.url}}'">Select Options</button>
+						{% endif %}
+					{% endif %}
+				</div>
+          </div>
+          {% endfor %}
+          </ol>      
+        </div>
+
+    {% endif %}
+    
+    
+    <p>{{ paginate | default_pagination }}</p>
+    
+    {% endpaginate %}    
+    
+  {% endif %}
+  
+  
+  
+
+</div>

@@ -1,0 +1,40 @@
+<!--Footer -->
+<footer>
+    <div class="footer_top">
+        <div class="wrapper">
+            <div class="footer_top_con" style="
+                text-align: center;
+                color: #eee;
+            ">
+                <h1 style="font-size: 5em;line-height: 1;">SAMPLE FOOTER CONTENT</h1>
+                <h1 style="font-size: 2em;">Edit sections/footer.liquid</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer_btm">
+        <div class="wrapper">
+            <div class="footer_btm_con">
+                <div class="footer_nav">
+                    {% include 'footernav' %}
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<span class="back_top"></span>
+
+{% schema %}
+{
+"name": "Footer Menu",
+"settings": [
+{
+"type": "link_list",
+"id": "footer_main_linklist",
+"label": "Services Menu",
+"default": "main-menu"
+}
+]
+}
+{% endschema %}

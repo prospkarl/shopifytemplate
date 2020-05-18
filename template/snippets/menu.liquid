@@ -1,0 +1,36 @@
+<!-- Sample Menu > header.liquid -->
+
+<ul style="
+    display: flex;
+    justify-content: space-around;
+">
+    {% for link in linklists[section.settings.main_linklist].links %}
+
+    {% if link.active %}
+    <li class="current_page_item">
+        {% else %}
+    <li class="">
+        {% endif %}
+
+        <a href="{{link.url}}" style="color:white !important">{{link.title}}</a>
+
+        {% if link.links != blank %}
+
+        <!-- #UNCOMMENT IF HAS SUBLINKS -->
+        <!-- <ul>
+            {% for childlink in link.links %}
+
+            {% if childlink.active %}
+            <li class="current_page_item">
+                {% else %}
+            <li class="">
+                {% endif %}
+                <a href="{{childlink.url}}" style="color:white !important">sublink: {{childlink.title}}</a>
+            </li>
+            {% endfor %}
+        </ul> -->
+
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>

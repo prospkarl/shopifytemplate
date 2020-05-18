@@ -1,0 +1,44 @@
+<!-- Cart Details (Ajax use the following class) -->
+
+<div style="text-align:center; cursor: pointer;" onclick="window.location.href='/cart'">
+  <h1 style=" font-size: 3em; line-height: 2; ">Cart Details</h1>
+  <!-- shopify-cart-qty -->
+  <div>Cart (<span class="shopify-cart-qty">0</span>)</div>
+  <!-- shopify-cart-total -->
+  <div>Amount (<span class="shopify-cart-total">0</span>)</div>
+</div>
+
+
+<!-- End of Cart Details -->
+
+<div style="text-align: center; background-color: #333; color:white;"">
+  <h1 style=" font-size: 3em; line-height: 2; ">SAMPLE HEADER CONTENT</h1>
+  <h1 style=" font-size: 1.5em;line-height: 1;">Edit /themes/header.liquid</h1>
+  <br>
+
+  <!-- Sample Search Form -->
+  <form action="/search" method="get">
+    <p><input type="text" name="q" value="{{search.terms  | escape}}" id="result-q" /> <input type="submit"
+        value="Search" style="width:100px" /></p>
+  </form>
+  <!-- End Sample Search Form -->
+
+
+  <!-- include menu: /snippets > menu.liquid -->
+  {% include 'menu' %}
+</div>
+
+<!-- Go to themes > Customize -->
+{% schema %}
+{
+"name": "Main Menu",
+"settings": [
+{
+"type": "link_list",
+"id": "main_linklist",
+"label": "Menu",
+"default": "main-menu"
+}
+]
+}
+{% endschema %}

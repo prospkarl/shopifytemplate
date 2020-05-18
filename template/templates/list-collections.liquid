@@ -1,0 +1,30 @@
+{% paginate collections by 10 %}
+
+{% if collections.size > 0 %}
+
+<h2 style="font-size:3em; line-height: 1;">Product Collections</h2>
+edit template/list-collections.liquid
+<br><br>
+
+<div id="collections-listing">
+  <ul class="collections-list">
+    {% for collection in collections %}
+    <a href="{{ collection.url }}">
+      <li class="collection {{ collection.handle }}-collection">
+        <img src="{{ collection.image | img_url: 'medium' }}" alt="{{ collection.title}}">
+        <div class="collection-info">
+          <h3 class="collection-name">{{ collection.title | escape }} ({{collection.products_count}})</h3>
+          <!-- <small class="hint">{{ collection.products_count | pluralize: 'product', 'products' }}</small> -->
+        </div>
+      </li>
+    </a>
+    {% endfor %}
+  </ul>
+
+  <div id="pagination">{{ paginate | default_pagination }}</div>
+
+  {% else %}
+  <p>No Collections found...</p>
+  {% endif %}
+  {% endpaginate %}
+</div>

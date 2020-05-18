@@ -1,0 +1,22 @@
+{% assign heading = 'You may also like' %}
+{% assign limit = 4 %}
+<div class="page-width product-recommendations" data-base-url="{{ routes.product_recommendations_url }}" data-product-id="{{ product.id }}" data-limit="{{ limit }}" data-section-id="{{ section.id }}" data-section-type="product-recommendations">
+  {% if recommendations.performed %}
+    {% if recommendations.products_count > 0 %}
+      <div class="section-header text-center">
+        <h2>{{ heading }}</h2>
+      </div>
+      <div class="recommendations-list">
+        {% for product in recommendations.products %}
+            {% include 'product-card-grid', max_height: 250 %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% else %}
+    <div class="product-recommendations__loading-dots">
+      <div class="product-recommendations__loading-dot"></div>
+      <div class="product-recommendations__loading-dot"></div>
+      <div class="product-recommendations__loading-dot"></div>
+    </div>
+  {% endif %}
+</div>

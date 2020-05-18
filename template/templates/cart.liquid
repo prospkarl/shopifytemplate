@@ -1,0 +1,87 @@
+<div class="shopify-cart">
+    {% if cart.item_count > 0 %}        
+        <form action="/cart" method="post">
+            <div id="table-section" class="table-container">
+                <table class="cart-items">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Qty</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    {% for line_item in cart.items %}
+
+                    <tr class="cart-row">
+                        <td>
+                            <a href="{{line_item.url}}">
+                                <img src="{{line_item | img_url}}" alt="">
+                            </a>
+                        </td>
+                        <td class="line-name">
+                            <a href="{{line_item.url}}">
+                                {{line_item.title}} ({{line_item.quantity}})
+                            </a>
+                        </td>
+                        <td class="line-price">
+                            {{line_item.price | money}}
+                        </td>
+                        <td class="line-input">
+                            <input type="number" name="updates[]" size="4" id="updates_{{ line_item.id }}"
+                                value="{{ line_item.quantity }}" class="product-qty" />
+                        </td>
+                        <td class="line-total">
+                            {{line_item.final_line_price | money}}
+                        </td>
+                        <td class="line-close">
+                            <a href="/cart/change?line={{ forloop.index }}&quantity=0#table-section">
+                                <span class="delete-item">x</span>
+                            </a>
+                        </td>
+                    </tr>
+
+                    {% endfor %}
+
+                </table>
+                <div class="other-info">
+                    <div class="box-info">
+                        <h1>Cart Totals</h1>
+                        
+                        <div class="info-row">
+                            <p>Total Quantity:</p>
+                            <span>{{cart.item_count}}</span>
+                        </div>
+
+                        <div class="info-row">
+                            <p>Sub Total:</p>
+                            <span>{{cart.items_subtotal_price | money}}</span>
+                        </div>
+
+                        {% if cart.total_discount > 0 %}
+                            <div class="info-row">
+                                <p>Discount:</p>
+                                <span>{{cart.total_discount | money}}</span>
+                            </div>
+                        {% endif %}
+    
+                        <div class="info-row">
+                            <p>Grand Total:</p>
+                            <span>{{cart.total_price | money}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-actions">
+                    <input class="primary-btn primary-bg" type="submit" name="update" value="Update Cart" />
+                    <input class="primary-btn primary-bg" type="submit" name="checkout" value="Proceed to Checkout" />
+                </div>
+            </div>
+        </form>
+    {% else %}
+        <div class="cart-empty">
+            <h1>Your cart is currently empty.</h1>    
+            <a href="/collections/all" class="shop-now-btn primary-bg">Continue Shopping</a>
+        </div>
+    {% endif %}
+</div>

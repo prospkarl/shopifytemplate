@@ -1,0 +1,15 @@
+<ul>
+    {% for link in linklists[section.settings.footer_main_linklist].links %}
+
+
+    {% if link.active %}
+    <li class="current_page_item">
+        {% else %}
+    <li>
+        {% endif %}
+
+        <a href="{{link.url}}">{{link.title}}</a>
+    </li>
+
+    {% endfor %}
+</ul>

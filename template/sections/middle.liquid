@@ -1,0 +1,62 @@
+<div id="middle">
+    <div class="wrapper">
+        <div class="middle_con" style="text-align:center">
+            <h1 style="font-size: 3em;text-align: center;margin-bottom: 1em;line-height: 1;">SAMPLE MIDDLE CONTENT (from
+                templates/index.liquid)</h1>
+            <h1 style="
+            font-size: 1.5em;
+            line-height: 1;
+            ">Edit /themes/middle.liquid</h1>
+            <br><br>
+            <div class="middle_boxes animatedParent animateOnce">
+                <div class="midbox animated zoomIn">
+                    <figure> <img src="{{'midbox-bg1.jpg' | asset_url}}" alt="adult woman wearing red shirt"> </figure>
+                    <div class="midbox_info">
+                        {{section.settings.mid_box_1}}
+                    </div>
+                </div>
+                <div class="midbox animated zoomIn">
+                    <figure> <img src="{{'midbox-bg2.jpg' | asset_url}}" alt="couple looking at their right side">
+                    </figure>
+                    <div class="midbox_info">
+                        {{section.settings.mid_box_2}}
+                    </div>
+                </div>
+                <div class="midbox animated zoomIn">
+                    <figure> <img src="{{'midbox-bg3.jpg' | asset_url}}" alt="adult man and his son smiling"> </figure>
+                    <div class="midbox_info">
+                        {{section.settings.mid_box_3}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Schema Settings are found at Theme > Customize -->
+
+{% schema %}
+{
+"name": "Middle Content",
+"settings": [
+{
+"type": "html",
+"id": "mid_box_1",
+"label": "Middle Box 1",
+"default": "<h2>Sample Mid <span>Content</span></h2><a href='/'>Shop Now</a>"
+},
+{
+"type": "html",
+"id": "mid_box_2",
+"label": "Middle Box 2",
+"default": "<h2>Sample Mid Content <span>Collection</span></h2><a href='/'>Shop Now</a>"
+},
+{
+"type": "html",
+"id": "mid_box_3",
+"label": "Middle Box 3",
+"default": "<h2>Check Theme > Customize</h2><a href='/'>Shop Now</a>"
+}
+]
+}
+{% endschema %}

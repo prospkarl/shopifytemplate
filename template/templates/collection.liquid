@@ -1,0 +1,42 @@
+<div class="products-list">
+    {% paginate collection.products by 10 %}
+
+    {% if collection.products_count > 0 %}
+        {% for product in collection.products %}
+        <div class="product">
+            <a href="{{product.url}}">
+                <img src="{{ product | img_url: 'large' }}" alt="{{product.title}}">
+            </a>
+            <div class="product-details">
+                <h1>{{product.title}}</h1>
+
+                {% assign count = 0 %}
+
+                {% for collection in product.collections %}
+                {% if count == 0 %}
+                <a href={{collection.url}} style="color:black">{{ collection.title }} </a>
+                {% assign count = 1 %}
+                {% endif %}
+                {% endfor %}
+
+                <span>{{product.price | money}}</span>
+                </select>
+
+                {% if product.available %}
+                    {% if product.has_only_default_variant %}
+                        <button class="add-to-cart primary-bg" data-variant="{{ product.first_available_variant.id }}">Add to Cart</button>
+                    {% else %}
+                        <button class="primary-bg" onclick="window.location.href='{{product.url}}'">Select Options</button>
+                    {% endif %}
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+        <div class="pagination-con">
+            {{ paginate | default_pagination }}
+        </div>
+    {% else %}
+        <h1 class="no-products">No products found</h1>
+    {% endif %}
+    {% endpaginate %}
+</div>
