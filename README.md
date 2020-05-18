@@ -13,6 +13,7 @@ This is a guide for Shopify Conversion
 - banner.liquid
 - middle.liquid
 - footer.liquid
+
 ![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/sections.png?raw=true)
 
 **Note** _Check "theme.liquid" for the page layout_
