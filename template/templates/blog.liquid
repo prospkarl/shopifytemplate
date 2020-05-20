@@ -1,9 +1,18 @@
 <!-- For Blog Object visit this link: https://shopify.dev/docs/themes/liquid/reference/objects/blog -->
 
+<div class="article-list">
+    {% if blog.articles.size > 0 %}
 
-{% for article in blog.articles %}
-<a href="{{article.url}}">
-    <img src="{{article | img_url}}" alt="">
-    <h2>{{ article.title }}</h2>
-</a>
-{% endfor %}
+        {% for article in blog.articles %}
+            <a href="{{article.url}}">
+                <img src="{{article | img_url}}" alt="">
+                <h2>{{ article.title }}</h2>
+            </a>
+        {% endfor %}
+
+    {% else %}
+    
+        <h1 class="no-products">No Blogs Found</h1>
+        
+    {% endif %}
+</div>
