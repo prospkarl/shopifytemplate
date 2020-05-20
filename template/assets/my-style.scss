@@ -395,6 +395,14 @@ table.cart-items td a{
   background:white;
   display: inline-block;
   margin: 15px;
+  border: 1px solid #eee;
+  box-shadow: 0 0 1em #eee;
+  padding:15px;
+  transition: all 0.3s ease-in-out
+}
+
+.collections-list .collection:hover{
+  transform: scale(1.02);
 }
 
 .collections-list .collection img{
@@ -456,4 +464,75 @@ nav.breadcrumb {
     flex-direction: row;
     justify-content: space-between;
     padding: 15px 0;
+}
+
+.article-list{
+  text-align: center;
+}
+
+
+div.contact-form {
+  text-align: center;
+  font-size: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  border: 2px solid #ececec;
+  background: #fefefe;
+  border-radius: 10px;
+  margin-top: 25px;
+}
+
+form.contact-form{
+  width: 100%;
+  padding: 30px 25px 10px 25px;
+  text-align:left;
+}
+
+form.contact-form p, form.contact-form span,  form.contact-form label{
+  color: #000 !important;
+  opacity: 1;
+  font-size: 20px;
+  line-height: 2;
+}
+
+form.contact-form span{
+  color: red !important;
+}
+
+form.contact-form input,  form.contact-form textarea{
+  padding: 20px 15px;
+  font-size: 15px;
+  border: 2px solid #e5e5e5;
+  outline: none;
+  width: 100%;
+  font-family:inherit;
+  margin-bottom:15px
+}
+
+form.contact-form label{
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  display: block;
+}
+
+form.contact-form .btn:hover {
+  background: #333
+}
+
+form.contact-form .btn{
+  display:block;
+  width: 200px;
+  height: 74px;
+  border: 0;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  font-size: 16px;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  -moz-transition: all .4s;
+  transition: all .4s;
+  text-shadow: 1px 1px 3px #999;
+  position: relative;
 }
