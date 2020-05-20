@@ -54,12 +54,12 @@
 
 			{% if template == 'index' %}
 			{{ content_for_layout }}
-			{{page.content}}
 			{% else %}
 			<div class="wrapper">
 				{% render 'breadcrumbs' %}
-				{{ content_for_layout }}
-				{{page.content}}
+				<main>
+					{{ content_for_layout }}
+				</main>
 			</div>
 			{% endif %}
 
