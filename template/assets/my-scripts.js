@@ -84,8 +84,6 @@ function getProductRecommendations() {
 
 
 function updateShopifyDetails() {
-    console.log('update');
-
     $.ajax({
         url: '/cart.js',
         type: 'GET',
