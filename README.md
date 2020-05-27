@@ -64,7 +64,7 @@ To get these credentials go to your account and get to Sidebar > Apps. And click
 ![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/adminapi.png?raw=true)
 
 #### THEME ID
-Click themes > Actions > Edit Code > Get the last key of the url /admin/themes/0128042
+Under Online store, click "Themes". On "Current Theme" section click on Actions > Edit Code. Then get the theme id from the last part of the url /admin/themes/0128042
 ![alt text](https://github.com/prospkarl/shopifytemplate/blob/master/images/theme_id.png?raw=true)
 
 ##### _'CONFIG.YML'_ MUST LOOK LIKE THIS
