@@ -1,14 +1,14 @@
 {
-    "contact": {
-      "form": {
-        "name": "Name",
-        "email": "Email",
-        "address": "Address",
-        "phone": "Phone Number",
-        "message": "Message",
-        "submit": "Send",
-        "post_success": "Thanks for contacting us. We'll get back to you as soon as possible.",
-        "error_heading": "Please adjust the following:"
-      }
+  "contact": {
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "address": "Address",
+      "phone": "Phone Number",
+      "message": "Message",
+      "submit": "Send",
+      "post_success": "Thanks for contacting us. We'll get back to you as soon as possible.",
+      "error_heading": "Please adjust the following:"
     }
   }
+}

@@ -7,6 +7,17 @@ and (max-width : 1000px) {
 
 @media only screen
 and (max-width : 760px) {
+  .other-info .box-info{
+    width:100%;
+    border: 1px solid #ccc;
+    border-top: 5px solid #bbb;
+    padding: 20px;
+    background: white;
+    border-radius: 3px 3px 15px 15px;
+    margin: 0 0 1em;
+    position: relative;
+  }
+
   .shopify-cart{
     padding:0;
   }
