@@ -1,10 +1,10 @@
 <div class="single-product-details">
     <div class="left-container">
-        
+
         <!-- {{image | img_url:'large'}} -->
         <div class="product-images">
             {% if product.images.size > 0 %}
-            
+
                 {% for image in product.images %}
 
                 <div>
@@ -17,7 +17,7 @@
 
                 <img src="{{image| img_url:'large'}}" alt="">
 
-            {% endif %}        
+            {% endif %}
         </div>
         <div class="product-images-nav">
             {% for image in product.images %}
@@ -29,13 +29,13 @@
     </div>
     <div class="right-container">
         <h1 class="product-name">{{product.title}}</h1>
-       
+
         <div class="price-info">
             {% if product.price_min == product.price_max %}
                 <span class="product-price primary-txt">{{product.price | money}}</span>
                 <span class="compare-price">{{product.compare_at_price | money}}</span>
             {% else %}
-                <span class="product-price primary-txt">{{product.price_min | money}} - {{product.price_max | money}}</span>                
+                <span class="product-price primary-txt">{{product.price_min | money}} - {{product.price_max | money}}</span>
             {% endif %}
 
         </div>
@@ -51,16 +51,16 @@
                     {% if product.variants[1].id %}
 
                     <div class="product-variants">
-                        
+
                     {% else %}
-                        
+
                     <div class="product-variants hidden">
 
                     {% endif %}
 
                         <label>Select Option</label>
 
-                            <select name="id">    
+                            <select name="id">
                                 {% for variant in product.variants %}
                                 <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %}
                                     value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
@@ -72,9 +72,6 @@
                     <input class="add-to-cart-btn primary-bg" type="submit" value="Add to cart" />
                 {% endform %}
 
-                    <div class="product-description">
-                        {{ product.content }}
-                    </div>
 
 
             {% else %}
@@ -82,6 +79,10 @@
                 <p class="comingsoon-text">Product is unavailable</p>
 
             {% endif %}
+
+            <div class="product-description">
+                {{ product.content }}
+            </div>
     </div>
 
 </div>
