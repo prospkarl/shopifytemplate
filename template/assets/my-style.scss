@@ -3,7 +3,7 @@
 * Author: 768 (Web2)
 */
 
-/* Theme Color */ 
+/* Theme Color */
 
 /* Primary Text */
 .primary-txt{
@@ -11,19 +11,23 @@
 }
 
 /* Primary Background */
-.primary-bg, .product-description:before{
+.primary-bg, .product-description:before, .shopify-challenge__container .btn{
   background-color: #6E923B !important;
   color:#fff;
   transition: all 0.3s ease;
 }
 
-.primary-bg:hover{
+.primary-bg:hover, .shopify-challenge__container .btn:hover{
   background-color: #333 !important;
   color:#fff;
   outline: none;
 }
 
-/* End Theme Color */ 
+.text-center{
+  text-align: center;
+}
+
+/* End Theme Color */
 
 .product-variants select, .product-qty, .add-to-cart-btn, .primary-bg{
   font-family:inherit;
@@ -31,6 +35,10 @@
 
 .hidden{
   display: none !important;
+}
+
+.hide, .visually-hidden{
+  display: none;
 }
 
 .products-list {
@@ -406,7 +414,7 @@ table.cart-items td a{
 }
 
 .collections-list .collection img{
-  width:100%;    
+  width:100%;
 }
 
 .collections-list .collection .collection-info {
@@ -418,8 +426,8 @@ table.cart-items td a{
   color: #333;
   text-transform: uppercase;
   min-height:100px;
-  display:block;  
-  padding: 1em 0  
+  display:block;
+  padding: 1em 0
 }
 
 nav.breadcrumb {
@@ -432,7 +440,7 @@ nav.breadcrumb {
 }
 
 .cart-empty h1{
-  font-size: 2em;  
+  font-size: 2em;
   line-height: 2;
 }
 
@@ -535,4 +543,95 @@ form.contact-form .btn{
   transition: all .4s;
   text-shadow: 1px 1px 3px #999;
   position: relative;
+}
+
+.shopify-challenge__container {
+  padding: 25px;
+  background: white;
+  border-radius: 5px;
+  margin: 2em auto;
+}
+
+.shopify-challenge__container .btn{
+  padding: 1em;
+  margin-top: 3em;
+  border: none;
+  font-family: inherit;
+  color: white;
+  text-transform: uppercase;
+  width: 70%;
+  transition: 0.3s ease;
+}
+
+.login-con{
+  margin: 2em auto 5em;
+  max-width: 500px;
+  width: 100%;
+}
+
+.login-con a{
+  color: #333;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.login-con .btn{
+  padding: 10px 2em;
+  border:none;
+  margin: 1em 0;
+}
+
+.login-con .login-header {
+  font-size: 41px;
+  line-height: 1;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.login-con form > input{
+  display:block;
+  width: 100%;
+  border: 1px solid #bbb;
+  font-size: 1em;
+  padding: 15px;
+  font-family: inherit;
+  margin: 4px 0 20px;
+}
+
+.login-con .form-message{
+  border: 2px solid #333 !important;
+  color: #333 !important;
+  padding: 1em;
+  margin-bottom: 2em;
+}
+
+.login-con .form-message--error, .input--error{
+  border: 2px solid indianred !important;
+  color: indianred !important;
+}
+
+.login-con .form-message--error a{
+  color:indianred;
+}
+
+.login-con .form-message .errors li{
+  font-size:15px;
+  list-style-type:disc;
+  margin-left:1em;
+}
+
+.input-error-message {
+  font-weight: bold;
+  color: indianred;
+}
+
+.collection-description {
+    border: 1px solid #555;
+    padding: 20px;
+    margin-bottom:25px;
+}
+
+.collection-description p{
+    margin:0;
 }

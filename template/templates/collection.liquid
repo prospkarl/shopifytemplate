@@ -1,4 +1,8 @@
 <div class="products-list">
+    <div class="collection-description">
+        <p>{{collection.description}}</p>
+    </div>
+
     {% paginate collection.products by 10 %}
 
     {% if collection.products_count > 0 %}

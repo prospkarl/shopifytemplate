@@ -1,11 +1,18 @@
 <!-- Cart Details (Ajax use the following class) -->
+<div style="display: flex; flex-direction: row;">
 
-<div style="text-align:center; cursor: pointer;" onclick="window.location.href='/cart'">
-  <h1 style=" font-size: 3em; line-height: 2; ">Cart Details</h1>
-  <!-- shopify-cart-qty -->
-  <div>Cart (<span class="shopify-cart-qty">0</span>)</div>
-  <!-- shopify-cart-total -->
-  <div>Amount (<span class="shopify-cart-total">0</span>)</div>
+  <div style="text-align:center; cursor: pointer; flex:1" onclick="window.location.href='/cart'">
+    <h1 style=" font-size: 3em; line-height: 2; ">Cart Details</h1>
+    <!-- shopify-cart-qty -->
+    <div>Cart (<span class="shopify-cart-qty">0</span>)</div>
+    <!-- shopify-cart-total -->
+    <div>Amount (<span class="shopify-cart-total">0</span>)</div>
+  </div>
+
+  <div style="text-align:center;cursor: pointer;flex:1;background-color: thistle;justify-content: center;align-items: center;display: flex;" onclick="window.location.href='/account'">
+    <h1 style=" font-size: 3em; line-height: 2; ">My Account</h1>
+  </div>
+
 </div>
 
 
